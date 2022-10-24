@@ -8,17 +8,11 @@ import Test from "../Test"
 export default function QuemSomos(){
     return(
         <View style={styles.container}>
-<<<<<<< HEAD
-          <Text >
-            Vapor
-          </Text>
-=======
           <Carousel
                 style="slides"
                 itemsPerInterval={1}
                 items={[ Home, Test ]}
      />
->>>>>>> 505eec4b38444560a8ac237bebbd3de613d0f683
         </View>
     );
 }
