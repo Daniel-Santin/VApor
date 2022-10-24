@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 const Stack = createNativeStackNavigator();
 import Routes from "./Routes"
 import Home from './pages/Home';
-
+import Tab from './Routes/Tab'
 export default function App() {
   return (
    <NavigationContainer>
@@ -16,7 +16,11 @@ export default function App() {
           component={Routes}
           options={{ headerShown: false }}
         />
-      
+        <Stack.Screen
+          name="Tab"
+          component={Tab}
+          options={{ headerShown: false }}
+        />
     </Stack.Navigator>
     <StatusBar backgroundColor={'#7f7f7f'} barStyle="light-content"/>
    </NavigationContainer>
