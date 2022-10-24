@@ -2,11 +2,11 @@ import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native'
 
-export default function QuemSomos(){
+export default function OQ(){
     return(
         <View style={styles.container}>
-          <Text >
-            Vapor
+          <Text>
+            O Que é Prematuridade?
           </Text>
         </View>
     );
