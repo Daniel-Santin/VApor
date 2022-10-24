@@ -1,20 +1,12 @@
 import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 
-export default function Home( ){
-    const navigation = useNavigation();
+export default function QuemSomos(){
     return(
         <View style={styles.container}>
-            
-                <Text style={styles.Title}>
-                Apressadinho
-                </Text>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Root')}>
-                    <Text>
-                        Entrar
-                    </Text>
-                </TouchableOpacity>
+          <Text>
+            dasdad
+          </Text>
         </View>
     );
 }
@@ -60,17 +52,6 @@ const styles = StyleSheet.create({
         width:'30%',
         alignSelf:'center',
         bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    button1:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'0%',
         alignItems:'center',
         justifyContent:'center'
     },
