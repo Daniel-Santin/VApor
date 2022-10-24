@@ -1,9 +1,10 @@
 import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
 import * as Animatable from 'react-native-animatable'
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useNavigation } from "@react-navigation/native";
 
 export default function Home( ){
+    const navigation = useNavigation();
     return(
         <View style={styles.container}>
             <Animatable.View animation="fadeInUp"style={styles.containerForm}>
@@ -13,6 +14,11 @@ export default function Home( ){
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('QuemSomos')}>
                     <Text>
                         Entrar
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button1} onPress={() => navigation.openDrawer()}>
+                    <Text>
+                        Drawer
                     </Text>
                 </TouchableOpacity>
             </Animatable.View>
@@ -59,6 +65,17 @@ const styles = StyleSheet.create({
         width:'30%',
         alignSelf:'center',
         bottom:'15%',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    button1:{
+        position:'absolute',
+        backgroundColor:'#fff',
+        borderRadius:50,
+        paddingVertical: 8,
+        width:'30%',
+        alignSelf:'center',
+        bottom:'0%',
         alignItems:'center',
         justifyContent:'center'
     },
