@@ -1,18 +1,12 @@
 import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
-import Carousel from "../../components/Carousel";
 
-import Home from "../Home";
-import Test from "../Test"
 export default function QuemSomos(){
     return(
         <View style={styles.container}>
-          <Carousel
-                style="slides"
-                itemsPerInterval={1}
-                items={[ Home, Test ]}
-     />
+          <Text>
+            dasdad
+          </Text>
         </View>
     );
 }
@@ -22,6 +16,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         backgroundColor: '#ADD8E6',
+        width: '100%',
+        height: '100%'
     },
     containerLogo:{
         flex: 1,
