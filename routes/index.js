@@ -4,8 +4,7 @@ import QuemSomos, {} from '../pages/QuemSomos'
 const Drawer = createDrawerNavigator();
 export default function Routes(){
   return (
-    <Drawer.Navigator useLegacyImplementation={true} initialRouteName="QuemSomos">
-      <Drawer.Screen name="Home" component={Home} />
+    <Drawer.Navigator useLegacyImplementation={true} >
       <Drawer.Screen name="QuemSomos" component={QuemSomos} />
     </Drawer.Navigator>
   );

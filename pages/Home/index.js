@@ -10,7 +10,7 @@ export default function Home( ){
                 <Text style={styles.Title}>
                 Apressadinho
                 </Text>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('QuemSomos')}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Root')}>
                     <Text>
                         Entrar
                     </Text>
