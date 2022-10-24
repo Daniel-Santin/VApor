@@ -1,13 +1,12 @@
 import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import * as Animatable from 'react-native-animatable'
 import { useNavigation } from "@react-navigation/native";
 
 export default function Home( ){
     const navigation = useNavigation();
     return(
         <View style={styles.container}>
-            <Animatable.View animation="fadeInUp"style={styles.containerForm}>
+            
                 <Text style={styles.Title}>
                 Apressadinho
                 </Text>
@@ -16,12 +15,6 @@ export default function Home( ){
                         Entrar
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => navigation.openDrawer()}>
-                    <Text>
-                        Drawer
-                    </Text>
-                </TouchableOpacity>
-            </Animatable.View>
         </View>
     );
 }
