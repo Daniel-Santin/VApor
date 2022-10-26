@@ -1,61 +1,58 @@
-import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import React, { useState } from "react";
+import { View, Text, Image } from "react-native-animatable";
+import AppIntroSlider from "react-native-app-intro-slider";
+
+const slides = [
+    {
+        key: '1',
+        title: 'tela 1',
+        text: 'tela 1',
+        image: require('./img/Jokenpo.png')
+    },
+    {
+        key: '2',
+        title: 'tela 2',
+        text: 'tela 2',
+        image: require('./img/pokedex.png')
+    },
+    {
+        key: '3',
+        title: 'tela 3',
+        text: 'tela 3',
+        image: require('./img/to-do-list.png')
+    },
+];
 
 export default function OQ(){
-    return(
-        <View style={styles.container}>
-          <Text>
-            O Que é Prematuridade?
-          </Text>
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#ADD8E6',
-    },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#ADD8E6'
-    },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-    button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
+    function renderSlides({ item }){
+        return(
+            <View style = {{flex:1}}>
+                <Image
+                    source={item.image}
+                    style={{ resizeMode: 'cover',
+                        height: '73%',
+                          width: '100%',  
+                    }}
+                />
+                <Text>
+                    {item.title}
+                </Text>
+                <Text>
+                    {item.text}
+                </Text>
+            </View>
+        )
     }
-})
+
+    return(
+        <AppIntroSlider
+            data={slides}
+            renderItem={renderSlides}
+            activeDotStyle={{
+                backgroundColor: '#009CFF',
+                width: 30,
+            }}
+        />
+    );
+
+}
