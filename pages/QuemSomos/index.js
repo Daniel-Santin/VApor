@@ -8,11 +8,13 @@ import Test from "../Test"
 export default function QuemSomos(){
     return(
         <View style={styles.container}>
-          <Carousel
-                style="slides"
-                itemsPerInterval={1}
-                items={[ Home, Test ]}
-     />
+            <Image
+                source={require('../imgs/QuemSomos.png')}
+                    style={{ resizeMode: 'cover',
+                        height: '73%',
+                          width: '100%',  
+                    }}
+                />
         </View>
     );
 }
