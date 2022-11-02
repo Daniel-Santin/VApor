@@ -20,9 +20,24 @@ import OQ from '../pages/OQueEPrematuridade/index';
 import QuemSomos, {} from '../pages/QuemSomos'
 import Vacinas from '../pages/Vacinas';
 const Drawer = createDrawerNavigator();
+
+import { useState } from 'react';
+
+import { colors } from '../themes/color'
+import { Text } from 'react-native';
+
+const colorsMenu = [
+  '#ff1493',
+  '#993399',
+]
+
 export default function Routes(){
   return (
-    <Drawer.Navigator useLegacyImplementation={true} >
+    <Drawer.Navigator useLegacyImplementation={true} screenOptions={{
+      drawerActiveBackgroundColor: colors.darkPink,
+      drawerActiveTintColor: '#fff',
+    }}
+    >
       <Drawer.Screen name="QuemSomos" component={QuemSomos} />
       <Drawer.Screen name="O Que é Prematuridade?" component={OQ} />
       <Drawer.Screen name="Complicações Comuns" component={Complicações} />

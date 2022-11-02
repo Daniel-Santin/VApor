@@ -1,7 +1,6 @@
 import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native'
-import Carousel from "../../components/Carousel";
 
 import Home from "../Home";
 import Test from "../Test"
@@ -23,7 +22,7 @@ const styles = StyleSheet.create({
     container:{ flex: 1,
         alignItems:'center',
         justifyContent:'center',
-        backgroundColor: '#ADD8E6',
+        backgroundColor: '#f5f5f5',
     },
     containerLogo:{
         flex: 1,
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 25,
         padding: '5%',
         marginBottom: 250,
-        backgroundColor:'#ADD8E6'
+        backgroundColor:'#f5f5f5'
     },
     Title:{
         marginTop:100,

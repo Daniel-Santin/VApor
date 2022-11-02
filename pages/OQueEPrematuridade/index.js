@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { View, Text, Image } from "react-native-animatable";
 import AppIntroSlider from "react-native-app-intro-slider";
 
+import { colors } from "../../themes/color";
+
 const slides = [
     {
         key: '1',
@@ -30,6 +32,8 @@ const slides = [
 ];
 
 export default function OQ(){
+    const [colorActiveItem, setColorActiveItem] = useState(colors.pink)
+    const [countChange, setCountChange] = useState(0)
     function renderSlides({ item }){
         return(
             <View style = {{flex:1,
@@ -45,12 +49,23 @@ export default function OQ(){
         )
     }
 
+    function handleSlideChange() {
+        const colorsSlide = [
+            colors.darkPink,
+            colors.pink,
+        ]
+        const maxlength = colorsSlide.length
+        setCountChange((e) => e === maxlength - 1 ? 0 : e + 1)
+        setColorActiveItem(colorsSlide[countChange])
+    }
+
     return(
         <AppIntroSlider
             data={slides}
             renderItem={renderSlides}
+            onSlideChange={handleSlideChange}
             activeDotStyle={{
-                backgroundColor: '#444',
+                backgroundColor: colorActiveItem,
                 width: 30,
             }}
         />

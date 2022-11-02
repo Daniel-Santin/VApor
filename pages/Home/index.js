@@ -1,81 +1,62 @@
 import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
+import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity, Button, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import {colors} from '../../themes/color'
+
+import Logo from '../../components/Animations/Logo'
 
 export default function Home( ){
     const navigation = useNavigation();
     return(
         <View style={styles.container}>
-            
-                <Text style={styles.Title}>
-                Apressadinho
-                </Text>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Root')}>
-                    <Text>
-                        Entrar
-                    </Text>
-                </TouchableOpacity>
+            <View style={styles.content}>
+                <Text style={styles.title}> Appressadinho </Text>
+                <Logo></Logo>
+                <Pressable
+                    style={styles.button}
+                    onPress={() => navigation.navigate('Root')}
+                >
+                    <Text style={styles.buttonText}> Entrar </Text>
+                </Pressable>
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#ADD8E6',
-        width: '100%',
+    container:{ 
+        display: 'flex',
+        justifyContent:'space-around',
+        alignItems: 'center',
+        backgroundColor: colors.pink,
         height: '100%'
     },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
+    content: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        width: '100%',
+        minHeight: '60%'
     },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#ADD8E6'
-    },
-    Title:{
-        marginTop:100,
+    title:{
         fontWeight:"bold",
-        color:'#111',
+        color:'#f8f8f8',
         fontSize: 54
     },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
     button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
+        padding: 16,
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        width: '80%',
+        fontSize: 24,
+        display: 'flex',
+        alignItems: 'center'
     },
-    button1:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'0%',
-        alignItems:'center',
-        justifyContent:'center'
+    buttonText: {
+        color: colors.pink,
     },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
+    logo: {
+        width: 300,
+        height: 300,
     }
 })
