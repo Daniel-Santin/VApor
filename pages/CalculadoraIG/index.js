@@ -1,61 +1,57 @@
-import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import React , { useState } from "react";
+import { View,Text,StyleSheet } from "react-native";
+import { colors } from "../../themes/color";
+import Picker from "../../components/Picker";
+
+const months = Object.keys(new Array(40).fill(null)).map(item => {
+    return { value: `${+item + 1}`, label: `${+item + 1}`}
+})
+
 
 export default function CalculadoraIG(){
+    const [test, setTest] = useState({})
+
+    function handleChangeValue(value) {
+        setTest({
+            ...test,
+            [value.param]: value.item,
+        })
+    }
     return(
-        <View style={styles.container}>
-          <Text>
-            Calculadora IG
-          </Text>
-        </View>
+          <View style={{ backgroundColor: colors.pink, flex: 1 , justifyContent: 'center', alignItems: 'center', width: '100%'}} >
+           
+            <Picker
+                style={{ width: '90%' }}
+                onChange={(item) => handleChangeValue({
+                    param: 'm',
+                    item
+                })}
+                items={months}
+                label="Mês"
+                placeholder="Digite um valor"
+                selectedValue={null}
+            />
+
+            <Picker
+                style={{ width: '90%', marginTop: 10 }}
+                onChange={(item) => handleChangeValue({
+                    param: 'l',
+                    item
+                })}
+                items={[
+                    { label: 'Football', value: 'football' },
+                    { label: 'Baseball', value: 'baseball' },
+                    { label: 'Hockey', value: 'hockey' },
+                ]}
+            />
+
+            <Text> { JSON.stringify(test) } </Text>
+          </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
-    },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#f5f5f5'
-    },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-    button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
+    input: {
+        color: 'red',
     }
 })
