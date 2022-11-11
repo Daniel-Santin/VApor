@@ -32,17 +32,16 @@ export default function CalculadoraIG(){
         const [age, numberAfterComma] = numberSplitedPoint.split('.')
         const numberAfterCommaInNumber = +numberAfterComma
         console.log(numberAfterCommaInNumber)
-        setCorrectedAge(`${age} anos e ${
+        setCorrectedAge(`${age} meses e ${
             numberAfterCommaInNumber <= 25 ? '' :
-            numberAfterCommaInNumber <= 50 ? '1 mes' :
-            numberAfterCommaInNumber <= 75 ? '2 meses' :
-            '3 meses'
+            numberAfterCommaInNumber <= 50 ? '1 semana' :
+            numberAfterCommaInNumber <= 75 ? '2 semanas' :
+            '3 semanas'
         }`)
 
     }
     return(
           <View style={{ backgroundColor: colors.pink, flex: 1 , justifyContent: 'center', alignItems: 'center', width: '100%'}} >
-            <Text> *obs: A calculadora só funciona com bebês até 24 meses</Text>
             <Picker
                 onChange={(item) => handleChangeValue({
                     param: 'ageInMonths',
@@ -70,7 +69,16 @@ export default function CalculadoraIG(){
                     <Text style={styles.buttonText}> Calcular </Text>
             </Pressable>
 
-            <Text> A idade corrigida é { correctedAge }  </Text>
+            { correctedAge && <Text style={{ marginTop: 10 }}> A idade corrigida é { correctedAge }  </Text> } 
+
+            <Pressable
+                    style={{ ...styles.button, marginTop: 100 }}
+                    onPress={handleClickButton}
+                    >
+                    <Text style={styles.buttonText}> Limpar </Text>
+            </Pressable>
+
+            <Text style={{ color: colors.darkPink }}> *obs: A calculadora só funciona com bebês até 24 meses</Text>
 
           </View>
     );
