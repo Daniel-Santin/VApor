@@ -61,6 +61,7 @@ export default function CalculadoraIG(){
                 })}
                 label="De quantas semanas a criança nasceu"
                 items={months}
+                selectedValue={null}
             />
             <Pressable
                     style={{ ...styles.button, marginTop: 10 }}
@@ -71,14 +72,7 @@ export default function CalculadoraIG(){
 
             { correctedAge && <Text style={{ marginTop: 10 }}> A idade corrigida é { correctedAge }  </Text> } 
 
-            <Pressable
-                    style={{ ...styles.button, marginTop: 100 }}
-                    onPress={handleClickButton}
-                    >
-                    <Text style={styles.buttonText}> Limpar </Text>
-            </Pressable>
-
-            <Text style={{ color: colors.darkPink }}> *obs: A calculadora só funciona com bebês até 24 meses</Text>
+            <Text style={{ color: colors.darkPink, marginTop: 60 }}> *obs: A calculadora só funciona com bebês até 24 meses</Text>
 
           </View>
     );
