@@ -1,6 +1,11 @@
 import { ScrollView, View } from "react-native"
 import List from "../../components/List"
 import Text from "../../components/Text"
+import { Image } from "react-native"
+
+import chart1 from '../../assets/chart1.png'
+import chart2 from '../../assets/chart2.png'
+import chart3 from '../../assets/chart3.png'
 
 const listItem = [
     'Lá embaixo, na linha horizontal, que vai de 22 a 50, temos a idade gestacional atual do bebê, contada por semanas, ou seja: se ele nasceu de 26 semanas, temos que acompanhar a linha vertical que sai da marca "26"',
@@ -13,7 +18,7 @@ const OQueEPrematuridade = () => {
         <ScrollView>
             <Text align="center"> Gráfico de Crescimento </Text>
 
-            <Text size="sm">
+            <Text size="sm" >
             Assim como está aqui apresentada, as curvas de acompanhamento de bebês prematuros baseiam-se no padrão de crescimento do bebê ainda no útero. Elas são excelentes instrumentos para avaliarmos a saúde e acompanharmos se o bebê está crescendo adequada e proporcionalmente, juntamente com o exame clínico e os dados laboratoriais. Porém, temos estas curvas somente como referência, pois devemos levar em consideração que quando o bebê nasce, ele é submetido à várias situações adversas ainda na UTI e, portanto, seu padrão de crescimento tende a ser diferente daquele esperado enquanto ele estava na barriga da mãe 
                 </Text>
 
@@ -23,6 +28,20 @@ const OQueEPrematuridade = () => {
                 </Text>
                 <List data={listItem}></List>
                 
+            </View>
+
+            <View style={{ marginTop: 20, display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Image source={chart1} />
+
+                <Text size="sm"> https://aps.saude.gov.br/ape/vigilanciaalimentar/curvascrescimento </Text>
+            </View>
+
+            <View style={{ marginTop: 20, display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Image source={chart2} />
+            </View>
+
+            <View style={{ marginTop: 20, display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Image source={chart3} />
             </View>
         </ScrollView>
     )

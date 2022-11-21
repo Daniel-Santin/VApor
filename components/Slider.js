@@ -11,7 +11,7 @@ export default function Slider({ slides }){
     function renderSlides({ item }){
         const { Component } = item
         return(
-            <ScrollView style = {{ flex:1, padding: 20, maxHeight: '90%', backgroundColor: colors.pink }}>
+            <ScrollView style = {{ flex:1, paddingLeft: 10, paddingRight: 10, maxHeight: '90%', backgroundColor: colors.pink }}>
                <Component />
             </ScrollView>
         )

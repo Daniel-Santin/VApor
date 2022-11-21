@@ -1,61 +1,35 @@
-import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import { ScrollView, View } from "react-native"
+import List from "../../components/List"
+import Text from "../../components/Text"
 
-export default function CuidadeNaFamilia(){
-    return(
-        <View style={styles.container}>
-          <Text>
-            Cuidado Centrado na Familia
-          </Text>
-        </View>
-    );
+
+
+const OQueEPrematuridade = () => {
+    return (
+        <ScrollView>
+            <Text align="center"> Cuidado centrado na família  </Text>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O Cuidado Centrado na Família (CCF) é a compreensão de que a família é considerada um elemento fundamental no cuidado e o isolamento social é um fator de risco. 
+                </Text>
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                É muito importante que todos os membros da família participem do planejamento das ações e da tomada de decisões a respeito das rotinas relacionadas ao bebê, dessa forma se houver outros filhos, eles devem ser incluídos nas atividades e rotinas do bebê, assim como os avós ou outros familiares.
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                Encorajamos que, com base no conteúdo desse app, os pais se sintam motivados em olhar seu bebê na sua individualidade e realizem os estímulos considerando o contexto familiar, inserindo os outros filhos e familiares criando um ambiente amoroso e de interação para toda família.  
+                </Text>
+                
+            </View>
+        </ScrollView>
+    )
 }
 
-const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
-    },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#f5f5f5'
-    },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-    button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
-    }
-})
+export default OQueEPrematuridade

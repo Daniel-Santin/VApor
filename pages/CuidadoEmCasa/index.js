@@ -1,61 +1,30 @@
-import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import Slider from "../../components/Slider"
+import Acompanhamento from "./Acompanhamento"
+import CuidadoEmCasa from './CuidadoEmCasa'
+import RedesDeProfissionais from './RededeProfis'
+import CuidadeNaFamilia from "./CuidadeNaFamilia"
 
-export default function CuidadoEmCasa(){
-    return(
-        <View style={styles.container}>
-          <Text>
-            O cuidado em casas
-          </Text>
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
+const slides = [
+    {
+        Component: CuidadoEmCasa,
+        key: 0,
     },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
+    {
+        Component: Acompanhamento,
+        key: 1,
     },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#f5f5f5'
+    {
+        Component: RedesDeProfissionais,
+        key: 2,
     },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-    button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
+    {
+        Component: CuidadeNaFamilia,
+        key: 3,
     }
-})
+]
+
+export default function OQ(){
+    return (
+        <Slider slides={slides} />
+    )
+}

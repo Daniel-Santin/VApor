@@ -1,61 +1,199 @@
-import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import { ScrollView, View } from "react-native"
+import List from "../../components/List"
+import Text from "../../components/Text"
 
-export default function Complicações(){
-    return(
-        <View style={styles.container}>
-          <Text>
-            Complicações comuns
-          </Text>
-        </View>
-    );
+const listItem = [
+    'RN pós-termo: 42 semanas ou mais;',
+    'RN termo: entre 38 e 41 semanas 6/7;',
+    'RN pré-termo (RNPT): 37 semanas ou menos',
+]
+
+const listItem2 = [
+    'Os RNPT (Recém Nascido Pré Termo) são classificados segundo os critérios: (OMS)',
+    'Pré-termo extremo (<28 semanas)',
+    'Muito pré-termo (28 a <32 semanas)',
+    'Pré-termo moderado a tardio (32 a <37 semanas)',
+]
+
+const Complicacoes = () => {
+    return (
+        <ScrollView>
+            <Text align="center"> Complicações comuns  </Text>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O risco de complicações neonatais é inversamente proporcional à idade gestacional (IG) ao nascimento, isso significa que quanto menor a idade gestacional, maior o risco de complicações. A cada semana que o feto permanece dentro do útero, ocorre um aprimoramento do seu desenvolvimento e redução da frequência e da gravidade de intercorrências e complicações neonatais.  
+                </Text>
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                Nosso objetivo não é assustar os papais e mamães, mas auxiliá-los nos pontos mais importantes para ficarem de olho em casa! 
+                </Text>                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                As complicações mais comuns para prematuros são: broncodisplasia, bronqueolite, persistência do canal arterial, convulsões, refluxo gastroesofágico e retinopatia da prematuridade 
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="md" align="center">
+                    Broncodisplasia
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                A broncodisplasia é uma lesão pulmonar que está presente em todo neonato que necessitou de concentrações de oxigênio acima de 21% por mais de 28 dias. Isso acontece porque quando o nosso corpo utiliza o oxigênio, ele gera um radical livre que lesiona os tecidos e gera inflamação. Essa inflamação afeta o pulmão e as vias aéreas, assim as funções respiratórias ficam alteradas. 
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O tratamento é feito através da suplementação nutricional, diuréticos, broncodilatadores e do desmame consciente da oxigenoterapia.
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="md" align="center">
+                Bronqueolite
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                A bronqueolite é uma infecção viral e sazonal, isso significa que em determinada época do ano ela é mais comum. Essa doença gera edema das vias respiratórias e acomete principalmente crianças de até 2 anos. Ela promove a secreção de um muco “semelhante a um chicletes” que dificulta a passagem do ar. 
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O tratamento é feito através da suplementação nutricional, diuréticos, broncodilatadores e do desmame consciente da oxigenoterapia.
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="md" align="center">
+                Persistência do canal arterial
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                Sabemos que o bebê não é apenas um adulto em miniatura, existem algumas diferenças no seu corpo, uma delas é o canal arterial. O canal arterial é uma comunicação que o feto tem entre a aorta e o ramo esquerdo da artéria pulmonar, quando o bebê nasce esse canal se fecha. Porém, é possível que, por conta de diversos fatores, ele não feche, e isso pode causar alterações hemodinâmicas e pulmonares.
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                É importante o acompanhamento com um pediatra para que ele monitore o fechamento do canal por meio de exames não invasivos. 
+
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O tratamento é feito com medicações que irão incentivar o fechamento deste canal, caso não obtenha resultado, o médico pode indicar a cirurgia.
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="md" align="center">
+                Convulsões
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                Convulsões são perturbações na atividade elétrica do cérebro que geram disfunção cerebral temporária. Em crianças pequenas as convulsões têm características como tremores e movimentos súbitos, enquanto bebês recém-nascidos os sinais são menos evidentes, como um estalar de lábios, mastigação involuntária ou a perda do tônus muscular temporária. Os médicos irão tratar as convulsões tentando achar a sua causa, mas se elas estiverem muito frequentes podem ser receitados anticonvulsionantes. 
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                É importante, caso você perceba que seu filho está tendo uma convulsão, não colocar nada em sua boca ou tentar segurar a língua. Mantenha a criança em um local em que ela não se machuque, longe de escadas ou móveis, vire-a de lado e procure ajuda especializada ou ligue 192 (Serviço de Atendimento Móvel de Urgência - SAMU) 
+
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="md" align="center">
+                Refluxo gastroesofágico
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O refluxo gastroesofágico ocorre quando o conteúdo do estômago “volta”, ou seja, ele sobe novamente pelo esôfago. O problema é que esse conteúdo é ácido e quando ele reflui causa problemas para a alimentação e respiração, e pode danificar o esôfago. Os bebês que têm refluxo podem apresentar dores torácicas e abdominais, azia e vômitos.Mas os sinais de refluxo no bebê podem ser mais discretos, como: chiado no peito constante, infecções de ouvido de repetição, tosse seca persistente, sono agitado, entre outros.   
+
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O diagnóstico é feito por meio de exames não invasivos associado à história clínica. É importante relatar ao pediatra do seu filho se notar algum desses sintomas.
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O tratamento é feito com mudanças na dieta e medicamentos. Geralmente os bebês superam o refluxo até os 18 meses. 
+
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O tratamento é feito com mudanças na dieta e medicamentos. Geralmente os bebês superam o refluxo até os 18 meses. 
+
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="md" align="center">
+                Retinopatia da prematuridade
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                A retinopatia da prematuridade é uma lesão na retina que é causada por causa dos radicais livres, que o corpo gera quando utiliza o oxigênio, que pode alterar o crescimento dos vasos sanguíneos na região. Portanto, essa doença pode aparecer nos bebês que precisam ficar muito tempo com o suporte de oxigênio, isso inclui principalmente os prematuros. 
+
+                </Text>
+                
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                O diagnóstico é feito através de um exame ocular e é importante que a intervenção seja feita logo, assim é possível evitar mais danos. Uma retinopatia não tratada pode causar perda visual. Mas fique tranquilo! O tratamento existe e é feito com fotocoagulação,  uma cirurgia a laser que tem  boa resolução.
+                </Text>
+                
+            </View>
+
+        </ScrollView>
+    )
 }
 
-const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
-    },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#f5f5f5'
-    },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-    button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
-    }
-})
+export default Complicacoes

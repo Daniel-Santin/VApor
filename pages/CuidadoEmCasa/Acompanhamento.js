@@ -1,61 +1,27 @@
-import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import { ScrollView, View } from "react-native"
+import List from "../../components/List"
+import Text from "../../components/Text"
 
-export default function Acompanhamento(){
-    return(
-        <View style={styles.container}>
-          <Text>
-            Acompanhamento pós-alta
-          </Text>
-        </View>
-    );
+
+
+const OQueEPrematuridade = () => {
+    return (
+        <ScrollView>
+            <Text align="center"> Acompanhamento </Text>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                Follow-up significa acompanhar, na área da medicina ele é feito através das consultas chamadas “de rotina”. Quando falamos do follow-up neonatal, temos como objetivo promover a supervisão da saúde em relação à nutrição, crescimento e desenvolvimento do bebê, considerando possíveis alterações e riscos e, quando necessário, promover a intervenção precoce e efetiva, além de garantir o suporte emocional para a família.
+                </Text>
+            </View>
+
+            <View style={{ marginTop: 20}}>
+                <Text size="sm">
+                Para certificarmos que o bebê prematuro está recebendo toda a atenção necessária, o acompanhamento deve realizado por uma equipe multiprofissional composta por: pediatra ou médico neonatologista, fisioterapeuta, fonoaudiólogo, nutricionista, oftalmologista, pneumologista, psicólogo e assistente social. Nem sempre a criança irá precisar de consultas com todos esses profissionais, é preciso observar a necessidade de acordo com a situação.
+                </Text>
+            </View>
+        </ScrollView>
+    )
 }
 
-const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
-    },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-    },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#f5f5f5'
-    },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-    button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
-    },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
-    }
-})
+export default OQueEPrematuridade
