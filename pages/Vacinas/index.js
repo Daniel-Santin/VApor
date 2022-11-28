@@ -1,31 +1,29 @@
 import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native'
+import Slider from "../../components/Slider"
+
+const page1 = [
+
+]
+const slides = [
+        {
+            Component: pag1,
+            key: 0,
+        },
+        {
+            Component: GraficodeCresc,
+            key: 1,
+        },
+        {
+            Component: Complicações,
+            key: 2,
+        }
+]
+
 
 export default function Vacinas(){
-    return(
-        <View style={styles.container}>
-          <Text>
-            Vacinas
-          </Text>
-        </View>
-    );
+    return (
+        <Slider slides={slides} />
+    )
 }
-
-const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
-    },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-})
