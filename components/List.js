@@ -6,9 +6,9 @@ function List({ data }) {
     return (
         <View>
             {
-                data.map(item => {
+                data.map((item,index) => {
                     return (
-                        <FlatList>  
+                        <FlatList key={index}>  
                             <Text size="sm">
                                 {item}
                             </Text>
