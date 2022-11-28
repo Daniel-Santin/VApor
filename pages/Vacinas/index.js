@@ -8,17 +8,9 @@ const page1 = [
 ]
 const slides = [
         {
-            Component: pag1,
+            Component: page1,
             key: 0,
         },
-        {
-            Component: GraficodeCresc,
-            key: 1,
-        },
-        {
-            Component: Complicações,
-            key: 2,
-        }
 ]
 
 
