@@ -2,37 +2,14 @@ import { Text, StyleSheet, } from "react-native";
 import { colors } from "../themes/color";
 
 export default function ({ children, size = 'md', align }) {
-    let style = {
+    const style = {
         ...styles.text,
+        ...styles[size],
+        ...styles[align]
     }
-
-    if(size === 'lg') {
-        style = {
-            ...style,
-            ...styles.lg,
-        }
-    } else if(size === 'sm') {
-        style = {
-            ...style,
-            ...styles.sm,
-        }
-    }
-
-    if(align === 'center') {
-        style = {
-            ...style,
-            ...styles.center
-        }
-    } else if(align === 'left') {
-        style = {
-            ...style,
-            ...styles.left
-        }
-    }
-
 
     return (
-        <Text style={style }>
+        <Text style={style}>
             { children }
         </Text>
     )
@@ -49,11 +26,17 @@ const styles = StyleSheet.create({
     },
 
     lg: {
-        fontSize: 40,
+        color: '#e1e1e1',
     },
-
+    
     center: {
+        fontSize: 24,
         textAlign: 'center',
+        backgroundColor: colors.darkPink,
+        color: colors.white,
+        padding: 20,
+        fontWeight: 'bold',
+        textTransform: 'uppercase'
     },
 
     left: {
