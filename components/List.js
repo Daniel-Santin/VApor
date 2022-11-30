@@ -1,18 +1,16 @@
-import { View } from 'react-native';
-import FlatList from 'react-native-unordered-list';
-import Text from './Text';
+import { Text, View } from 'react-native';
+import { colors } from '../themes/color';
 
 function List({ data }) {
+    const colors2 = ['#7d46de', colors.darkPink, colors.pink]
     return (
         <View>
             {
                 data.map((item,index) => {
                     return (
-                        <FlatList key={index}>  
-                            <Text size="sm">
-                                {item}
-                            </Text>
-                        </FlatList>
+                            <View key={index} style={{ paddingLeft: 4, padding: 20, backgroundColor: colors2[index], marginBottom: 2 }}>
+                                <Text style={{ color: "#fff" }}> { item } </Text>
+                            </View>
                     )
                 })
             }

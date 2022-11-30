@@ -3,6 +3,8 @@ import List from "../../components/List"
 import Text from "../../components/Text"
 import { Image } from "react-native"
 
+import Slider from "../../components/Slider"
+
 import chart1 from '../../assets/chart1.png'
 import chart2 from '../../assets/chart2.png'
 import chart3 from '../../assets/chart3.png'
@@ -13,37 +15,56 @@ const listItem = [
     'Uma vez tendo os dados coletados do bebê, seguimos a linha vertical referente à semana gestacional (não a corrigida!) e verificamos comprimento (cm), perímetro cefálico (cm) e peso (kg). O ideal é que o ponto de encontro das linhas esteja sempre perto da linha central da curva, em negrito (chamamos de percentil 50). Essa linha central se refere à média da população. O distanciamento da mesma é sinal de alerta à equipe da UTI.',
 ]
 
-const OQueEPrematuridade = () => {
+const FirstPage = () => {
+    return (
+        <Image style={{ flex: 1, alignSelf: 'stretch', justifyContent: 'center', alignItems: 'center' }} source={chart1} />
+    )
+}
+
+const SecondPage = () => {
     return (
         <ScrollView>
-            <Text align="center"> Gráfico de Crescimento </Text>
-
-            <Text size="sm" >
-            Assim como está aqui apresentada, as curvas de acompanhamento de bebês prematuros baseiam-se no padrão de crescimento do bebê ainda no útero. Elas são excelentes instrumentos para avaliarmos a saúde e acompanharmos se o bebê está crescendo adequada e proporcionalmente, juntamente com o exame clínico e os dados laboratoriais. Porém, temos estas curvas somente como referência, pois devemos levar em consideração que quando o bebê nasce, ele é submetido à várias situações adversas ainda na UTI e, portanto, seu padrão de crescimento tende a ser diferente daquele esperado enquanto ele estava na barriga da mãe 
-                </Text>
-
-                <View style={{ marginTop: 20}}>
-                <Text size="sm">
-                Para entender como funciona a curva:
-                </Text>
-                <List data={listItem}></List>
-                
+            <View style={{ marginTop: 8 }}>
+                <Text> No gráfico de crescimento, as curvas de acompanhamento de bebês prematuros baseiam-se no padrão de crescimento do bebê ainda no útero.</Text>
             </View>
-
-            <View style={{ marginTop: 20, display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Image source={chart1} />
-
-                <Text size="sm"> https://aps.saude.gov.br/ape/vigilanciaalimentar/curvascrescimento </Text>
+            <View style={{ marginTop: 16 }}>
+                <Text> Elas são excelentes instrumentos para avaliarmos a saúde e acompanharmos se o bebê está crescendo adequada e proporcionalmente, juntamente com o exame clínico e os dados laboratoriais. </Text>
             </View>
-
-            <View style={{ marginTop: 20, display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Image source={chart2} />
-            </View>
-
-            <View style={{ marginTop: 20, display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Image source={chart3} />
+            <View style={{ marginTop: 16 }}>
+                <Text> Porém, temos estas curvas somente como referência, pois devemos levar em consideração que quando o bebê nasce, ele é submetido à várias situações adversas ainda na UTI e, portanto, seu padrão de crescimento tende a ser diferente daquele esperado enquanto ele estava na barriga da mãe. </Text>
             </View>
         </ScrollView>
+    )
+}
+
+const ThirdPage = () => {
+    return (
+        <ScrollView>
+            <Text align="center"> Para entender como funciona a curva: </Text>
+
+            <View>
+                <List data={listItem}/>
+            </View>
+        </ScrollView>
+    )
+}
+
+const OQueEPrematuridade = () => {
+    return (
+        <Slider title="Gráfico de Crescimento" slides={[
+            {
+                Component: FirstPage,
+                key: 0,
+            },
+            {
+                Component: SecondPage,
+                key: 1,
+            },
+            {
+                Component: ThirdPage,
+                key: 2,
+            }
+        ]} />
     )
 }
 

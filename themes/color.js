@@ -1,5 +1,5 @@
 const pink = '#ffc0cb'
-const darkPink = '#ff1493'
+const darkPink = '#f77db1'
 const black = '#1e1e1e'
 const white = '#fff'
 
