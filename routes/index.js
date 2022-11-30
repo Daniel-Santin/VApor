@@ -23,9 +23,9 @@ const colorsMenu = [
 
 export default function Routes(){
   return (
-    <Stack.Navigator useLegacyImplementation={true}
+    <Stack.Navigator 
       >
-      <Drawer.Screen name="Home" component={Home}/>
+      <Stack.Screen name="Home" component={Home}/>
       <Stack.Screen name="QuemSomos" component={QuemSomos} />
       <Stack.Screen name="O Que é Prematuridade?" component={OQ} />
       <Stack.Screen name="Calculadora IG" component={CalculadoraIG} />
