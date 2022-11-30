@@ -1,4 +1,5 @@
 import { ScrollView, View } from "react-native"
+import MomBaby from "../../components/Animations/MomBaby"
 import List from "../../components/List"
 import Text from "../../components/Text"
 
@@ -18,11 +19,13 @@ const listItem2 = [
 const page1 = () => {
     return (
         <ScrollView>
-
-            <View style={{ marginTop: 20}}>
-                <Text size="sm">
-                    Prematuro é todo recém-nascido com menos de 37 semanas completas de gestação. A OMS considera a prematuridade como um problema mundial, principalmente pela relação com a morbimortalidade neonatal. Além disso, o Brasil é colocado como o 10º país com maior taxa mundial de nascimentos prematuros, sendo responsável por 60% deles.
-                </Text>
+            <View style={{ marginTop: 20, flex: 1 }}>
+                <MomBaby></MomBaby>
+                <View style={{ maxWidth: '100%'}}>
+                    <Text size="sm">
+                        Prematuro é todo recém-nascido com menos de 37 semanas completas de gestação. A OMS considera a prematuridade como um problema mundial, principalmente pela relação com a morbimortalidade neonatal. Além disso, o Brasil é colocado como o 10º país com maior taxa mundial de nascimentos prematuros, sendo responsável por 60% deles.
+                    </Text>
+                </View>
             </View>
         </ScrollView>
     )

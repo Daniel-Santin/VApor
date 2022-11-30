@@ -19,7 +19,7 @@ export default function Slider({ slides, title }){
 
     return(
         <View style = {{ flex:1, maxHeight: '100%', backgroundColor: '#fff' }}>
-            <Text align="center"> { title } </Text>
+            <Text type="title" align="center"> { title } </Text>
             <AppIntroSlider
                 data={slides}
                 renderItem={renderSlides}
