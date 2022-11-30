@@ -2,8 +2,6 @@ import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native'
 
-import Home from "../Home";
-import Test from "../Test"
 export default function QuemSomos(){
     return(
         <View style={styles.container}>

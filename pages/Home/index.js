@@ -2,7 +2,7 @@ import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity, Button, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import {colors} from '../../themes/color'
-
+import QuemSomos from "../QuemSomos";
 import Logo from '../../components/Animations/Logo'
 
 export default function Home( ){
@@ -14,7 +14,7 @@ export default function Home( ){
                 <Logo></Logo>
                 <Pressable
                     style={styles.button}
-                    onPress={() => navigation.navigate('Root')}
+                    onPress={() => navigation.navigate('QuemSomos')}
                 >
                     <Text style={styles.buttonText}> Entrar </Text>
                 </Pressable>
