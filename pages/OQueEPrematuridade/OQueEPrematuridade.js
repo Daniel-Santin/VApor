@@ -1,4 +1,5 @@
 import { ScrollView, View } from "react-native"
+import MomBaby from "../../components/Animations/MomBaby"
 import List from "../../components/List"
 import Text from "../../components/Text"
 
@@ -15,34 +16,45 @@ const listItem2 = [
     'Pré-termo moderado a tardio (32 a <37 semanas)',
 ]
 
-const OQueEPrematuridade = () => {
+const page1 = () => {
     return (
         <ScrollView>
-            <Text align="center"> O que é a prematuridade? </Text>
-
-            <View style={{ marginTop: 20}}>
-                <Text size="sm">
-                    Prematuro é todo recém-nascido com menos de 37 semanas completas de gestação. A OMS considera a prematuridade como um problema mundial, principalmente pela relação com a morbimortalidade neonatal. Além disso, o Brasil é colocado como o 10º país com maior taxa mundial de nascimentos prematuros, sendo responsável por 60% deles.
-                </Text>
+            <View style={{ marginTop: 20, flex: 1 }}>
+                <MomBaby></MomBaby>
+                <View style={{ maxWidth: '100%'}}>
+                    <Text size="sm">
+                        Prematuro é todo recém-nascido com menos de 37 semanas completas de gestação. A OMS considera a prematuridade como um problema mundial, principalmente pela relação com a morbimortalidade neonatal. Além disso, o Brasil é colocado como o 10º país com maior taxa mundial de nascimentos prematuros, sendo responsável por 60% deles.
+                    </Text>
+                </View>
             </View>
+        </ScrollView>
+    )
+}
 
-            <View style={{ marginTop: 20}}>
+export const page2 = () => {
+    return (
+        <View style={{ marginTop: 20}}>
                 <Text size="sm">
                     Os recém-nascidos (RN) podem ser classificados conforme a idade ao nascimento, assim:
                 </Text>
                 <List data={listItem}></List>
                 
-            </View>
-
-            <View style={{ marginTop: 20}}>
-                <Text size="sm">
-                Os bebês prematuros não são todos iguais, já que quanto menor a idade gestacional, maior é a necessidade de suporte e cuidados. Portanto, existem nomenclaturas para classificar esses bebês:
-                </Text>
-                
-            </View>
-                <List data={listItem2}></List>
-        </ScrollView>
+        </View>
     )
 }
 
-export default OQueEPrematuridade
+export const page3 = () => {
+    return (
+        <View style={{ marginTop: 20}}>
+        <Text size="sm">
+        Os bebês prematuros não são todos iguais, já que quanto menor a idade gestacional, maior é a necessidade de suporte e cuidados. Portanto, existem nomenclaturas para classificar esses bebês:
+        </Text>
+        
+        <List data={listItem2}></List>
+    </View>
+    )
+}
+
+export {
+    page1,
+}

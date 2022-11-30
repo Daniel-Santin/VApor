@@ -27,6 +27,8 @@ export default function Routes(){
     <Drawer.Navigator useLegacyImplementation={true} screenOptions={{
       drawerActiveBackgroundColor: colors.darkPink,
       drawerActiveTintColor: '#fff',
+      headerStyle: { backgroundColor: '#7d46de', },
+      headerTitleStyle: { color: '#7d46de', }
     }}
     >
       <Drawer.Screen name="QuemSomos" component={QuemSomos} />
