@@ -14,8 +14,7 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator useLegacyImplementation={true} 
-    >
+    <Drawer.Navigator >
       <Drawer.Screen name="Home" component={Routes} />
       <Drawer.Screen name="QuemSomos" component={QuemSomos} />
       <Drawer.Screen name="O Que é Prematuridade?" component={OQ} />
