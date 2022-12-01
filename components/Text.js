@@ -19,7 +19,8 @@ export default function ({ children, size = 'md', align, type, color = colors.bl
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: 30,
+        fontSize: 25,
+        lineHeight: 28
     },
 
     sm: {

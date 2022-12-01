@@ -11,7 +11,7 @@ const OQueEPrematuridade = () => {
 
             <View style={{ marginTop: 20}}>
                 <Text size="sm">
-                    PO cuidado da família é essencial para o desenvolvimento humano, pois é em casa que a criança irá conhecer o mundo e descobrir novas sensações, o que ajuda no desenvolvimento motor, intelectual, emocional e social. É muito comum, após a permanência do bebê na UTI, os pais sentirem  medo e  receio de cuidar do seu filho em casa. Cuidados são importantes como evitar visitas, aglomerações, mas com o passar do tempo, papais e bebês vão se adaptando e  adquirindo confiança. Um dos nossos objetivos é auxiliar e facilitar esse processo. 
+                    O cuidado da família é essencial para o desenvolvimento humano, pois é em casa que a criança irá conhecer o mundo e descobrir novas sensações, o que ajuda no desenvolvimento motor, intelectual, emocional e social. É muito comum, após a permanência do bebê na UTI, os pais sentirem  medo e  receio de cuidar do seu filho em casa. Cuidados são importantes como evitar visitas, aglomerações, mas com o passar do tempo, papais e bebês vão se adaptando e  adquirindo confiança. Um dos nossos objetivos é auxiliar e facilitar esse processo. 
 
                 </Text>
             </View>
