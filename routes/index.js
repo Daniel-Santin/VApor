@@ -23,17 +23,16 @@ const colorsMenu = [
 
 export default function Routes(){
   return (
-    <Stack.Navigator 
-      >
-      <Stack.Screen name="Home" component={Home}/>
-      <Stack.Screen name="QuemSomos" component={QuemSomos} />
-      <Stack.Screen name="O Que é Prematuridade?" component={OQ} />
-      <Stack.Screen name="Calculadora IG" component={CalculadoraIG} />
-      <Stack.Screen name="O cuidado em casa" component={CuidadoEmCasa} />
-      <Stack.Screen name="Aleitamento" component={Aleitamento} />
-      <Stack.Screen name="Vacinas" component={Vacinas} />
-      <Stack.Screen name="Apoio" component={Apoio} />
-      <Stack.Screen name="Desenvolvimento" component={Desenvolvimento} />
+    <Stack.Navigator >
+      <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+      <Stack.Screen name="QuemSomos" component={QuemSomos} options={{headerShown: false}}/>
+      <Stack.Screen name="O Que é Prematuridade?" component={OQ} options={{headerShown: false}}/>
+      <Stack.Screen name="Calculadora IG" component={CalculadoraIG} options={{headerShown: false}}/>
+      <Stack.Screen name="O cuidado em casa" component={CuidadoEmCasa} options={{headerShown: false}}/>
+      <Stack.Screen name="Aleitamento" component={Aleitamento} options={{headerShown: false}}/>
+      <Stack.Screen name="Vacinas" component={Vacinas} options={{headerShown: false}}/>
+      <Stack.Screen name="Apoio" component={Apoio} options={{headerShown: false}}/>
+      <Stack.Screen name="Desenvolvimento" component={Desenvolvimento} options={{headerShown: false}}/>
     </Stack.Navigator>
   );
 }

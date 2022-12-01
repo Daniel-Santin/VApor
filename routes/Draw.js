@@ -14,16 +14,37 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator >
-      <Drawer.Screen name="Home" component={Routes} />
-      <Drawer.Screen name="QuemSomos" component={QuemSomos} />
-      <Drawer.Screen name="O Que é Prematuridade?" component={OQ} />
-      <Drawer.Screen name="Calculadora IG" component={CalculadoraIG} />
-      <Drawer.Screen name="O cuidado em casa" component={CuidadoEmCasa} />
-      <Drawer.Screen name="Aleitamento" component={Aleitamento} />
-      <Drawer.Screen name="Vacinas" component={Vacinas} />
-      <Drawer.Screen name="Apoio" component={Apoio} />
-      <Drawer.Screen name="Desenvolvimento" component={Desenvolvimento} />
+    <Drawer.Navigator   screenOptions={{
+      drawerStyle: {
+        backgroundColor: '#c6cbef',
+        width: 240,
+      },
+    }}>
+      <Drawer.Screen name="Home" component={Routes}options={{headerShown:false}}/>
+      <Drawer.Screen name="QuemSomos" component={QuemSomos} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
+      <Drawer.Screen name="O Que é Prematuridade?" component={OQ} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
+      <Drawer.Screen name="Calculadora IG" component={CalculadoraIG} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
+      <Drawer.Screen name="O cuidado em casa" component={CuidadoEmCasa} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
+      <Drawer.Screen name="Aleitamento" component={Aleitamento} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
+      <Drawer.Screen name="Vacinas" component={Vacinas} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
+      <Drawer.Screen name="Apoio" component={Apoio} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
+      <Drawer.Screen name="Desenvolvimento" component={Desenvolvimento} options={{
+        headerTitle:'',
+        headerStyle:{backgroundColor: '#6A329F',}}}/>
     </Drawer.Navigator>
   );
 }
