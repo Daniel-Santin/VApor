@@ -1,31 +1,21 @@
-import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import { ScrollView } from "react-native";
+import Slider from "../../components/Slider";
+import Text from "../../components/Text";
+import { colors } from "../../themes/color";
 
-export default function Desenvolvimento(){
-    return(
-        <View style={styles.container}>
-          <Text>
-            Desenvolvimento
-          </Text>
-        </View>
-    );
-}
+const Root = () => (
+    <ScrollView>
+        <Text align="center" color={colors.pink}> SELECIONE QUE IDADE QUER PESQUISAR: </Text>
+    </ScrollView>
+)
 
-const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
-    },
-    Title:{
-        marginTop:100,
-        fontWeight:"bold",
-        color:'#111',
-        fontSize: 54
-    },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
-})
+const MarcosDosDesenvolvimentos = () => (
+    <Slider title="OS MARCOS DO DESENVOLVIMENTO" slides={[
+        {
+            Component: Root,
+            key: 0,
+        }
+    ]} />
+)
+
+export default MarcosDosDesenvolvimentos;
