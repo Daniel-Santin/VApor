@@ -1,65 +1,59 @@
 import React from "react";
-import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native'
+import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity, Button, Pressable } from "react-native";
+import {colors} from '../../themes/color'
+
+import { page1 } from "./pag1";
+import Slider from "../../components/Slider"
+
+
+const slides = [
+    {
+        Component: page1,
+        key: 0,
+    },
+
+]
 
 export default function QuemSomos(){
-    return(
-        <View style={styles.container}>
-            <Image
-                source={require('../imgs/QuemSomos.png')}
-                    style={{ resizeMode: 'cover',
-                        height: '73%',
-                          width: '100%',  
-                    }}
-                />
-        </View>
-    );
+    return (
+        <Slider slides={slides} title="Quem Somos" />
+    )
 }
 
 const styles = StyleSheet.create({
-    container:{ flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: '#f5f5f5',
+    container:{ 
+        display: 'flex',
+        justifyContent:'space-around',
+        alignItems: 'center',
+        backgroundColor: colors.pink,
+        height: '100%'
     },
-    containerLogo:{
-        flex: 1,
-        alignItems:'center',
-        justifyContent:'center',
+    content: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        width: '100%',
+        minHeight: '60%'
     },
-    containerForm:{
-        flex:1,
-        borderTopLeftRadius: 25,
-        borderTopRightRadius: 25,
-        borderBottomRightRadius: 25,
-        borderBottomLeftRadius: 25,
-        padding: '5%',
-        marginBottom: 250,
-        backgroundColor:'#f5f5f5'
-    },
-    Title:{
-        marginTop:100,
+    title:{
         fontWeight:"bold",
-        color:'#111',
+        color:'#f8f8f8',
         fontSize: 54
     },
-    Text:{
-        fontFamily:'SansSeriff',
-        color:'#888'
-    },
     button:{
-        position:'absolute',
-        backgroundColor:'#fff',
-        borderRadius:50,
-        paddingVertical: 8,
-        width:'30%',
-        alignSelf:'center',
-        bottom:'15%',
-        alignItems:'center',
-        justifyContent:'center'
+        padding: 16,
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        width: '80%',
+        fontSize: 24,
+        display: 'flex',
+        alignItems: 'center'
     },
-    buttonText:{
-        fontSize:18,
-        color:'#ccc'
+    buttonText: {
+        color: colors.pink,
+    },
+    logo: {
+        width: 300,
+        height: 300,
     }
 })
