@@ -19,9 +19,12 @@ import QuemSomos, {} from '../pages/QuemSomos'
 import Vacinas from '../pages/Vacinas';
 
 import TwoMonths from '../pages/Desenvolvimento/TwoMonths'
+import FourMonths from '../pages/Desenvolvimento/FourMonths';
+
 const Drawer = createDrawerNavigator();
 
 import { colors } from '../themes/color'
+import SixMonths from '../pages/Desenvolvimento/SixMonths';
 
 export default function Routes(){
   return (
@@ -46,6 +49,8 @@ export default function Routes(){
       <Drawer.Screen name="Apoio" component={Apoio} />
       <Drawer.Screen name="Desenvolvimento" component={Desenvolvimento} />
       <Drawer.Screen name='2 meses' component={TwoMonths} />
+      <Drawer.Screen name='4 meses' component={FourMonths} />
+      <Drawer.Screen name='6 meses' component={SixMonths} />
     </Drawer.Navigator>
   );
 }

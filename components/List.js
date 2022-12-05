@@ -2,7 +2,7 @@ import { Text, View } from 'react-native';
 import { colors } from '../themes/color';
 
 function List({ data }) {
-    const colors2 = ['#7d46de', colors.darkPink, colors.pink, '#7d46de', colors.darkPink, colors.pink]
+    const colors2 = ['#7d46de', colors.darkPink, colors.pink, '#7d46de', colors.darkPink, colors.pink, '#7d46de', colors.darkPink, colors.pink,]
     return (
         <View>
             {
