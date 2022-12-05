@@ -31,6 +31,34 @@ const Root = () => {
                 >
                     <Text color="#fff" style={styles.buttonText}> 6 Meses </Text>
                 </Pressable>
+
+                <Pressable
+                    style={styles.button}
+                    onPress={() => navigation.navigate('9 meses')}
+                >
+                    <Text color="#fff" style={styles.buttonText}> 9 Meses </Text>
+                </Pressable>
+
+                <Pressable
+                    style={styles.button}
+                    onPress={() => navigation.navigate('1 ano')}
+                >
+                    <Text color="#fff" style={styles.buttonText}> 1 ano </Text>
+                </Pressable>
+
+                <Pressable
+                    style={styles.button}
+                    onPress={() => navigation.navigate('18 meses')}
+                >
+                    <Text color="#fff" style={styles.buttonText}> 18 Meses </Text>
+                </Pressable>
+
+                <Pressable
+                    style={styles.button}
+                    onPress={() => navigation.navigate('2 anos')}
+                >
+                    <Text color="#fff" style={styles.buttonText}> 2 anos </Text>
+                </Pressable>
     </ScrollView>
 )}
 

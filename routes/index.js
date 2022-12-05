@@ -25,6 +25,10 @@ const Drawer = createDrawerNavigator();
 
 import { colors } from '../themes/color'
 import SixMonths from '../pages/Desenvolvimento/SixMonths';
+import NineMonths from '../pages/Desenvolvimento/NineMonths';
+import OneYear from '../pages/Desenvolvimento/OneYear';
+import EighteenMonths from '../pages/Desenvolvimento/EighteenMonths';
+import TwoYears from '../pages/Desenvolvimento/TwoYears';
 
 export default function Routes(){
   return (
@@ -51,6 +55,10 @@ export default function Routes(){
       <Drawer.Screen name='2 meses' component={TwoMonths} />
       <Drawer.Screen name='4 meses' component={FourMonths} />
       <Drawer.Screen name='6 meses' component={SixMonths} />
+      <Drawer.Screen name='9 meses' component={NineMonths} />
+      <Drawer.Screen name='1 ano' component={OneYear} />
+      <Drawer.Screen name='18 meses' component={EighteenMonths} />
+      <Drawer.Screen name='2 anos' component={TwoYears} />
     </Drawer.Navigator>
   );
 }
