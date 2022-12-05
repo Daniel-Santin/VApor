@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
 
     sm: {
         fontSize: 14,
+        lineHeight: 20
     },
 
     lg: {
