@@ -9,7 +9,7 @@ export default function Home( ){
     return(
         <View style={styles.container}>
             <View style={styles.content}>
-                <Text style={styles.title}> Appressadinho </Text>
+                <Text style={styles.title}> Apressadinho </Text>
                 <Logo></Logo>
                 <Pressable
                     style={styles.button}

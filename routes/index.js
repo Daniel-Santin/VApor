@@ -41,10 +41,10 @@ export default function Routes(){
     >
       <Drawer.Screen name="QuemSomos" component={QuemSomos} />
       <Drawer.Screen name="O Que é Prematuridade?" component={OQ} />
+      <Drawer.Screen name="Gráfico de crescimento" component={GraficodeCresc} />
       <Drawer.Screen name="Complicações Comuns" component={Complicações} />
-      <Drawer.Screen name="Gráfico de crescimento para prematuros" component={GraficodeCresc} />
       <Drawer.Screen name="Calculadora IG" component={CalculadoraIG} />
-      <Drawer.Screen name="O cuidado em casaa" component={CuidadoEmCasa} />
+      <Drawer.Screen name="O cuidado em casa" component={CuidadoEmCasa} />
       <Drawer.Screen name="Acompanhamento pós-alta" component={Acompanhamento} />
       <Drawer.Screen name="Rede de profissionais" component={RededeProfis} />
       <Drawer.Screen name="Cuidado centrado na familia" component={CuidadeNaFamilia} />

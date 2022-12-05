@@ -3,19 +3,20 @@ import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity } from "react-nat
 import { useNavigation } from '@react-navigation/native'
 import Slider from "../../components/Slider"
 
-const page1 = [
+// const page1 = [
 
-]
-const slides = [
-        {
-            Component: page1,
-            key: 0,
-        },
-]
+// ]
+// const slides = [
+//         {
+//             Component: page1,
+//             key: 0,
+//         },
+// ]
 
 
 export default function Vacinas(){
     return (
-        <Slider slides={slides} />
+        // <Slider slides={slides} />
+        <View> </View>
     )
 }

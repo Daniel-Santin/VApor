@@ -1,8 +1,8 @@
-import { ScrollView, View } from "react-native"
+import { ScrollView, View ,StyleSheet} from "react-native"
 import List from "../../components/List"
 import Text from "../../components/Text"
 import { Image } from "react-native"
-
+import image1 from "../../assets/05-removebg-preview.png"
 import Slider from "../../components/Slider"
 
 import chart1 from '../../assets/chart1.png'
@@ -17,21 +17,24 @@ const listItem = [
 
 const FirstPage = () => {
     return (
-        <Image style={{ flex: 1, alignSelf: 'stretch', justifyContent: 'center', alignItems: 'center' }} source={chart1} />
-    )
+        <View style={{ paddingTop:50, maxWidth: '100%' ,alignItems:"center"}}>
+        <Image style={{ width: 350,height: 450, }} source={chart1} />
+        </View>
+        )
 }
 
 const SecondPage = () => {
     return (
         <ScrollView>
-            <View style={{ marginTop: 8 }}>
-                <Text> No gráfico de crescimento, as curvas de acompanhamento de bebês prematuros baseiam-se no padrão de crescimento do bebê ainda no útero.</Text>
-            </View>
-            <View style={{ marginTop: 16 }}>
-                <Text> Elas são excelentes instrumentos para avaliarmos a saúde e acompanharmos se o bebê está crescendo adequada e proporcionalmente, juntamente com o exame clínico e os dados laboratoriais. </Text>
-            </View>
-            <View style={{ marginTop: 16 }}>
-                <Text> Porém, temos estas curvas somente como referência, pois devemos levar em consideração que quando o bebê nasce, ele é submetido à várias situações adversas ainda na UTI e, portanto, seu padrão de crescimento tende a ser diferente daquele esperado enquanto ele estava na barriga da mãe. </Text>
+            <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
+                <Image source={image1}/>
+                <Text  size="sm" >
+                    <Text size="sm">   No Gráfico de crescimento, as curvas de acompanhamento de bebês prematuros baseiam-se no padrão de crescimento do bebê ainda no útero</Text>
+                    {"\n"} {"\n"}
+                    <Text size="sm">   Elas são excelentes instrumentos para avaliarmos a saúde e acompanharmos se o bebê está crescendo adequadamente e proporcionalmente, juntamente com o exame clínico e os dados laboratoriais. </Text>
+                    {"\n"} {"\n"}  
+                    <Text size="sm">   Porém, temos estas curvas somente como referência, pois devemos levar em consideração que quando o bebê nasce, ele é submetido à várias situações adversas ainda na UTI e, portanto, seu padrão de crescimento tende a ser diferente daquele esperado enquanto ele estava na barriga da mãe.</Text>
+                </Text>
             </View>
         </ScrollView>
     )
@@ -40,7 +43,7 @@ const SecondPage = () => {
 const ThirdPage = () => {
     return (
         <ScrollView>
-            <Text align="center"> Para entender como funciona a curva: </Text>
+            <Text style={styles.baseText} > {"\n"} Para entender como funciona a curva: {"\n"} </Text>
 
             <View>
                 <List data={listItem}/>
@@ -69,3 +72,9 @@ const OQueEPrematuridade = () => {
 }
 
 export default OQueEPrematuridade
+
+const styles = StyleSheet.create({
+    baseText: {
+      fontWeight: 'bold'
+    }
+  });

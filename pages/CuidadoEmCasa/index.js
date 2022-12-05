@@ -25,6 +25,6 @@ const slides = [
 
 export default function OQ(){
     return (
-        <Slider slides={slides} />
+        <Slider title='O cuidado em casa'slides={slides} />
     )
 }

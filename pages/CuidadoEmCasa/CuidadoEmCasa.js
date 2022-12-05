@@ -7,7 +7,7 @@ import Text from "../../components/Text"
 const OQueEPrematuridade = () => {
     return (
         <ScrollView>
-            <Text align="center"> O cuidado em casa </Text>
+            
 
             <View style={{ marginTop: 20}}>
                 <Text size="sm">

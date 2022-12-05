@@ -18,7 +18,7 @@ const SecondPage = () => (
 
 const FollowUp = () => {
     return (
-        <Slider title="FOLLOW-UP" slides={[
+        <Slider title="Acompanhamento pós-alta" slides={[
             {
                 Component: FirstPage,
                 key: 0,

@@ -17,14 +17,14 @@ const slides = [
         Component: WhatIsPrematurity.page3,
         key: 2,
     },
-    // {
-    //     Component: GraficodeCresc,
-    //     key: 3,
-    // },
-    // {
-    //     Component: Complicações,
-    //     key: 4,
-    // }
+    {
+        Component: WhatIsPrematurity.page4,
+        key: 3,
+    },
+    {
+        Component: WhatIsPrematurity.page5,
+        key: 4,
+    },
 ]
 
 export default function OQ(){
