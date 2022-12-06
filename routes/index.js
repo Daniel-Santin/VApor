@@ -2,7 +2,6 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Aleitamento from '../pages/Aleitamento';
-import Apoio from '../pages/Apoio';
 import CalculadoraIG from '../pages/CalculadoraIG';
 import CuidadoEmCasa from '../pages/CuidadoEmCasa';
 import Acompanhamento from '../pages/CuidadoEmCasa/Acompanhamento';

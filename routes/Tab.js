@@ -2,7 +2,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Routes from '.';
 import Aleitamento from '../pages/Aleitamento';
-import Apoio from '../pages/Apoio';
 import CalculadoraIG from '../pages/CalculadoraIG';
 import CuidadoEmCasa from '../pages/CuidadoEmCasa';
 import Desenvolvimento from '../pages/Desenvolvimento';

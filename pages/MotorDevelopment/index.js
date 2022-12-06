@@ -20,6 +20,10 @@ const slides = [
         Component: motor.page4,
         key: 3,
     },
+    {
+        Component: motor.page5,
+        key: 4,
+    },
 ]
 
 export default function OQ(){
