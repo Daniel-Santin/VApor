@@ -6,7 +6,6 @@ import Apoio from '../pages/Apoio';
 import CalculadoraIG from '../pages/CalculadoraIG';
 import CuidadoEmCasa from '../pages/CuidadoEmCasa';
 import Acompanhamento from '../pages/CuidadoEmCasa/Acompanhamento';
-import CuidadeNaFamilia from '../pages/CuidadoEmCasa/CuidadeNaFamilia';
 import RededeProfis from '../pages/CuidadoEmCasa/RededeProfis';
 import Desenvolvimento from '../pages/Desenvolvimento';
 import ComoAjudarOBb from '../pages/Desenvolvimento/ComoAjudarOBb';
@@ -17,7 +16,7 @@ import GraficodeCresc from '../pages/OQueEPrematuridade/GraficodeCresc';
 import OQ from '../pages/OQueEPrematuridade/index';
 import QuemSomos, {} from '../pages/QuemSomos'
 import Vacinas from '../pages/Vacinas';
-
+import MotorDevelopment from '../pages/MotorDevelopment'
 import TwoMonths from '../pages/Desenvolvimento/TwoMonths'
 import FourMonths from '../pages/Desenvolvimento/FourMonths';
 
@@ -47,10 +46,9 @@ export default function Routes(){
       <Drawer.Screen name="O cuidado em casa" component={CuidadoEmCasa} />
       <Drawer.Screen name="Acompanhamento pós-alta" component={Acompanhamento} />
       <Drawer.Screen name="Rede de profissionais" component={RededeProfis} />
-      <Drawer.Screen name="Cuidado centrado na familia" component={CuidadeNaFamilia} />
       <Drawer.Screen name="Aleitamento" component={Aleitamento} />
       <Drawer.Screen name="Vacinas" component={Vacinas} />
-      <Drawer.Screen name="Apoio" component={Apoio} />
+      <Drawer.Screen name="O Desenvolvimento Motor" component={MotorDevelopment} />
       <Drawer.Screen name="Desenvolvimento" component={Desenvolvimento} />
       <Drawer.Screen name='2 meses' component={TwoMonths} />
       <Drawer.Screen name='4 meses' component={FourMonths} />

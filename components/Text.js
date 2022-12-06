@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
     },
 
     sm: {
-        fontSize: 14,
+        fontSize: 15,
         lineHeight: 20
     },
-
+    
     lg: {
         fontSize: 24,
     },

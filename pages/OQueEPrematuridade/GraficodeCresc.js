@@ -1,6 +1,5 @@
-import { ScrollView, View ,StyleSheet} from "react-native"
+import { ScrollView, View ,StyleSheet,Text} from "react-native"
 import List from "../../components/List"
-import Text from "../../components/Text"
 import { Image } from "react-native"
 import image1 from "../../assets/05-removebg-preview.png"
 import Slider from "../../components/Slider"
@@ -43,7 +42,7 @@ const SecondPage = () => {
 const ThirdPage = () => {
     return (
         <ScrollView>
-            <Text style={styles.baseText} > {"\n"} Para entender como funciona a curva: {"\n"} </Text>
+            <Text style={styles.baseText}  > {"\n"} Para entender como funciona a curva: {"\n"} </Text>
 
             <View>
                 <List data={listItem}/>
@@ -75,6 +74,8 @@ export default OQueEPrematuridade
 
 const styles = StyleSheet.create({
     baseText: {
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      fontSize: 18,
+      textAlign:'center'
     }
   });

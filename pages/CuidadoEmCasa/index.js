@@ -1,26 +1,26 @@
 import Slider from "../../components/Slider"
 import Acompanhamento from "./Acompanhamento"
-import CuidadoEmCasa from './CuidadoEmCasa'
+import * as Cuidado from './CuidadoEmCasa'
 import RedesDeProfissionais from './RededeProfis'
-import CuidadeNaFamilia from "./CuidadeNaFamilia"
+
 
 const slides = [
     {
-        Component: CuidadoEmCasa,
+        Component: Cuidado.page1,
         key: 0,
     },
     {
-        Component: Acompanhamento,
+        Component: Cuidado.page2,
         key: 1,
     },
     {
-        Component: RedesDeProfissionais,
+        Component: Cuidado.page3,
         key: 2,
     },
     {
-        Component: CuidadeNaFamilia,
+        Component: Cuidado.page4,
         key: 3,
-    }
+    },
 ]
 
 export default function OQ(){

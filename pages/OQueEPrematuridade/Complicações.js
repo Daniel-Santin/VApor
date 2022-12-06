@@ -1,27 +1,26 @@
-import { ScrollView, View } from "react-native"
+import { ScrollView, View,Image,StyleSheet } from "react-native"
 import List from "../../components/List"
 import Slider from "../../components/Slider"
 import Text from "../../components/Text"
 import ComplicationsDisturb, { TextComplications } from "../../components/Complications"
-
+import image1 from "../../assets/07-removebg-preview.png"
+import Pressable from "react-native/Libraries/Components/Pressable/Pressable"
+import { colors } from "../../themes/color"
 const FirstPage = () => {
     return (
         <ScrollView>
-            <View style={{ marginTop: 20}}>
-                <Text size="sm">
+            <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
+                <Image source={image1}/>
+                <Text>
+                    <Text size="sm">
                     O risco de complicações neonatais é inversamente proporcional à idade gestacional (IG) ao nascimento, isso significa que quanto menor a idade gestacional, maior o risco de complicações. A cada semana que o feto permanece dentro do útero, ocorre um aprimoramento do seu desenvolvimento e redução da frequência e da gravidade de intercorrências e complicações neonatais.  
-                </Text>
-             </View>
-
-             <View style={{ marginTop: 20}}>
-                <Text size="sm">
-                Nosso objetivo não é assustar os papais e mamães, mas auxiliá-los nos pontos mais importantes para ficarem de olho em casa! 
-                </Text>
-             </View>
-
-             <View style={{ marginTop: 20}}>
-                <Text size="sm">
-                As complicações mais comuns para prematuros são: broncodisplasia, bronqueolite, persistência do canal arterial, convulsões, refluxo gastroesofágico e retinopatia da prematuridade 
+                    </Text>
+                    <Text size="sm">
+                    {"\n"}Nosso objetivo não é assustar os papais e mamães, mas auxiliá-los nos pontos mais importantes para ficarem de olho em casa! 
+                    </Text>
+                    <Text size="sm">
+                    {"\n"}As complicações mais comuns para prematuros são: broncodisplasia, bronqueolite, persistência do canal arterial, convulsões, refluxo gastroesofágico e retinopatia da prematuridade 
+                    </Text>
                 </Text>
              </View>
         </ScrollView>
@@ -33,7 +32,7 @@ const SecondPage = () => {
         <ScrollView>
             <ComplicationsDisturb title="BRONCODSIPLASIA">
                 <TextComplications>
-                    A broncodisplasia é uma lesão pulmonar que está presente em todo neonato que necessitou de concentrações de oxigênio acima de 21% por mais de 28 dias. Isso acontece porque quando o nosso corpo utiliza o oxigênio, ele gera um radical livre que lesiona os tecidos e gera inflamação. Essa inflamação afeta o pulmão e as vias aéreas, assim as funções respiratórias ficam alteradas. 
+                         A broncodisplasia é uma lesão pulmonar que está presente em todo neonato que necessitou de concentrações de oxigênio acima de 21% por mais de 28 dias. Isso acontece porque quando o nosso corpo utiliza o oxigênio, ele gera um radical livre que lesiona os tecidos e gera inflamação. Essa inflamação afeta o pulmão e as vias aéreas, assim as funções respiratórias ficam alteradas. 
                 </TextComplications>
 
                 <TextComplications>
@@ -114,7 +113,7 @@ const SixthyPage = () => (
 const SeventhyPage = () => (
     <ScrollView>
             <ComplicationsDisturb title="RETINOPATIA DA PREMATURIDADE">
-                <TextComplications>
+                <TextComplications >
                 A retinopatia da prematuridade é uma lesão na retina que é causada por causa dos radicais livres, que o corpo gera quando utiliza o oxigênio, que pode alterar o crescimento dos vasos sanguíneos na região. Portanto, essa doença pode aparecer nos bebês que precisam ficar muito tempo com o suporte de oxigênio, isso inclui principalmente os prematuros. 
                 </TextComplications>
 
@@ -124,7 +123,25 @@ const SeventhyPage = () => (
             </ComplicationsDisturb>
         </ScrollView>
 )
+// const EightyPagr = () => (
+//     <ScrollView>
+//             <ComplicationsDisturb>
+//             <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"50%"}}>
+//                 <Image source={image1}/>
+//                 <Text>
+//                     <Text color="#fff" size="sm">
+//                     Para mais informações, consulte o link do Ministério da Saúde que traz um resumo da prematuridade voltado para familias  
+//                     </Text>
+//                 </Text>
+//             </View>
+//                 <Pressable>           
+//                   onPress={() => navigation.navigate("Gráfico de crescimento")}
+//                   <Text> Mais informações</Text>
+//                 </Pressable> 
 
+//             </ComplicationsDisturb>
+//         </ScrollView>
+// )
 const Complications = () => {
     return (
         <Slider title="Complicações Comuns" slides={[
@@ -156,7 +173,11 @@ const Complications = () => {
             {
                 Component: SeventhyPage,
                 key: 6,
-            }
+            },
+            // {
+            //     Component: EightyPagr,
+            //     key: 7,
+            // }
         ]} />
     )
 }
@@ -343,3 +364,40 @@ export default Complications;
 //         </ScrollView>
 //     )
 // }
+
+
+const styles = StyleSheet.create({
+    container:{ 
+        display: 'flex',
+    },
+    content: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        width: '100%',
+        minHeight: '60%'
+    },
+    title:{
+        fontWeight:"bold",
+        color:'#f8f8f8',
+        fontSize: 54
+    },
+    button:{
+        padding: 10,
+        backgroundColor: colors.darkPink,
+        borderRadius: 100,
+        width: '50%',
+        fontSize: 5,
+        display: 'flex',
+        alignItems: 'center',
+        alignSelf: 'center',
+        marginTop: 10
+    },
+    buttonText: {
+        color: colors.white,
+    },
+    logo: {
+        width: 300,
+        height: 300,
+    }
+})
