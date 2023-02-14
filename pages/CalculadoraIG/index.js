@@ -72,7 +72,7 @@ export default function CalculadoraIG(){
 
             { correctedAge && <Text style={{ marginTop: 10 }}> A idade corrigida é { correctedAge }  </Text> } 
 
-            <Text style={{ color: colors.darkPink, marginTop: 60 }}> *obs: A calculadora só funciona com bebês até 24 meses</Text>
+            <Text style={{  marginTop: 60 }}> *obs: A calculadora só funciona com bebês até 24 meses</Text>
 
           </View>
     );
@@ -108,7 +108,6 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     buttonText: {
-        color: colors.pink,
     },
     logo: {
         width: 300,

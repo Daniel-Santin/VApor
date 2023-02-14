@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     title:{
         fontWeight:"bold",
         color:'#f8f8f8',
-        fontSize: 54
+        fontSize: 40
     },
     button:{
         padding: 16,
