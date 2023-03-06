@@ -31,7 +31,7 @@ export default function CalculadoraIG(){
 
         const [age, numberAfterComma] = numberSplitedPoint.split('.')
         const numberAfterCommaInNumber = +numberAfterComma
-        console.log(numberAfterCommaInNumber)
+
         setCorrectedAge(`${age} meses e ${
             numberAfterCommaInNumber <= 25 ? '' :
             numberAfterCommaInNumber <= 50 ? '1 semana' :
@@ -47,10 +47,11 @@ export default function CalculadoraIG(){
                     param: 'ageInMonths',
                     item
                 })}
+                value={1}
                 items={months2}
                 label="Idade atual em meses"
                 placeholder="Digite um valor"
-                selectedValue={null}
+                selectedValue={1}
             />
 
             <Picker
@@ -61,7 +62,8 @@ export default function CalculadoraIG(){
                 })}
                 label="De quantas semanas a criança nasceu"
                 items={months}
-                selectedValue={null}
+                value={1}
+                selectedValue={1}
             />
             <Pressable
                     style={{ ...styles.button, marginTop: 10 }}

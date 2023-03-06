@@ -12,7 +12,6 @@ function Picker({ style, label, onChange, items, placeholder, ...props }) {
             <RNPickerSelect
                 onValueChange={onChange}
                 items={[
-                    { value: null, label: placeholder },
                     ...items,
                 ]}
                 { ...props }
