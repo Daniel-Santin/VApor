@@ -9,7 +9,7 @@ export default function Home( ){
     return(
         <View style={styles.container}>
             <View style={styles.content}>
-                <Text style={styles.title}> Apressadinho </Text>
+                <Text style={styles.title}> Appressadinho </Text>
                 <Logo></Logo>
                 <Pressable
                     style={styles.button}
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: colors.pink,
+        fontSize: 20
     },
     logo: {
         width: 300,

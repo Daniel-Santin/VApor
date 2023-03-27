@@ -20,16 +20,19 @@ export default function ({ children, size = 'md', align, type, color = colors.bl
 const styles = StyleSheet.create({
     text: {
         fontSize: 25,
-        lineHeight: 28
+        lineHeight: 28,
+        textAlign: 'justify',
     },
 
     sm: {
         fontSize: 15,
-        lineHeight: 20
+        lineHeight: 20,
+        textAlign: 'justify',
     },
     
     lg: {
         fontSize: 24,
+        textAlign: 'justify',
     },
     
     center: {
