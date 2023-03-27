@@ -2,7 +2,6 @@ import React , { useState } from "react";
 import { View, StyleSheet, Pressable, Text } from "react-native";
 import { colors } from "../../themes/color";
 import Picker from "../../components/Picker";
-import { set } from "react-native-reanimated";
 
 const months = Object.keys(new Array(40).fill(null)).map(item => {
     return { value: `${+item + 1}`, label: `${+item + 1}`}
@@ -16,6 +15,9 @@ const months2 = Object.keys(new Array(24).fill(null)).map(item => {
 export default function CalculadoraIG(){
     const [ correctedAge, setCorrectedAge ] = useState('')
     const [ paramsCorrectedAge, setParamsCorrectedAge] = useState({})
+
+    const [firstValue, setFirstValue] = useState(1)
+    const [secondValue, setSecondValue] = useState(1)
 
     function handleChangeValue(value) {
         setParamsCorrectedAge({
@@ -32,6 +34,8 @@ export default function CalculadoraIG(){
         const [age, numberAfterComma] = numberSplitedPoint.split('.')
         const numberAfterCommaInNumber = +numberAfterComma
 
+        console.log(numberAfterComma)
+
         setCorrectedAge(`${age} meses e ${
             numberAfterCommaInNumber <= 25 ? '' :
             numberAfterCommaInNumber <= 50 ? '1 semana' :
@@ -43,26 +47,31 @@ export default function CalculadoraIG(){
     return(
           <View style={{ backgroundColor: colors.pink, flex: 1 , justifyContent: 'center', alignItems: 'center', width: '100%'}} >
             <Picker
-                onChange={(item) => handleChangeValue({
-                    param: 'ageInMonths',
-                    item
-                })}
-                value={1}
+                onChange={(item) => {
+                    setFirstValue(item)
+                    handleChangeValue({
+                        param: 'ageInMonths',
+                        item
+                    })}
+                } 
+                value={firstValue}
                 items={months2}
                 label="Idade atual em meses"
-                placeholder="Digite um valor"
                 selectedValue={1}
             />
 
             <Picker
                 style={{ marginTop: 10 }}
-                onChange={(item) => handleChangeValue({
-                    param: 'birthMonth',
-                    item
-                })}
+                onChange={(item) => {
+                    setSecondValue(item)
+                    handleChangeValue({
+                        param: 'birthMonth',
+                        item
+                    })}
+                }
                 label="De quantas semanas a criança nasceu"
                 items={months}
-                value={1}
+                value={secondValue}
                 selectedValue={1}
             />
             <Pressable

@@ -1,5 +1,7 @@
-import { ScrollView, View , Image,Text,StyleSheet} from "react-native"
+import { ScrollView, View , Image, StyleSheet} from "react-native"
 import List from "../../components/List"
+
+import Text from "../../components/Text"
 
 import image1 from "../../assets/02-removebg-preview.png"
 import Slider from "../../components/Slider"
@@ -28,18 +30,16 @@ const page2 = () => {
         <ScrollView>
             <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
                 <Image source={image1}/>
-                <Text>
-                    <Text>
+                <Text size="sm">
                         Devido ao período de hospitalização muitos bebês prematuros podem necessitar de complemento com fórmulas. O pediatra é o profissional mais indicado para direcionar qual fórmula usar.
                     </Text>
-                </Text>
             </View>
             
-            <Text style={styles.Text}> Você pode obter informações sobre alergias alimentares nos links:</Text>
+            <Text size="sm" style={styles.Text}> Você pode obter informações sobre alergias alimentares nos links:</Text>
             <View style={styles.button}>
-            <Text style={styles.buttonText}>https://www.alergiaaoleitedevaca.com.br/vida-social {'\n'}https://www.sbp.com.br/flip/consenso-alergia-alimentar-parte-01/ </Text>
+            <Text size="sm" style={styles.buttonText}>https://www.alergiaaoleitedevaca.com.br/vida-social {'\n'}https://www.sbp.com.br/flip/consenso-alergia-alimentar-parte-01/ </Text>
             </View>
-            <Text>
+            <Text size="sm">
             {'\n'}      É importante que antes dos 6 meses de idade o bebê não seja alimentado com sólidos ou pastosos, esse tempo pode variar um pouco mais nos bebês prematuros. Lembre-se que os bebês precisam de maturidade neurológica, motora e do sistema gastrointestinal para a transição alimentar, por isso aguarde seu médico dar sinal verde para introdução alimentar. 
             </Text>
         </ScrollView>
