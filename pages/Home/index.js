@@ -2,7 +2,7 @@ import React from "react";
 import { View,Text,StyleSheet,Image,TextInput,TouchableOpacity, Button, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import {colors} from '../../themes/color'
-import Logo from '../../components/Animations/Logo'
+import Logo from '../../assets/logo.jpg'
 
 export default function Home( ){
     const navigation = useNavigation();
@@ -10,7 +10,7 @@ export default function Home( ){
         <View style={styles.container}>
             <View style={styles.content}>
                 <Text style={styles.title}> Appressadinho </Text>
-                <Logo></Logo>
+                <Image srtle={{borderRadius: 12}} source={Logo}></Image>
                 <Pressable
                     style={styles.button}
                     onPress={() => navigation.navigate('Root')}
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent:'space-around',
         alignItems: 'center',
-        backgroundColor: colors.pink,
+        backgroundColor: colors.purple,
         height: '100%'
     },
     content: {
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     buttonText: {
-        color: colors.pink,
+        color: colors.purple,
         fontSize: 20
     },
     logo: {

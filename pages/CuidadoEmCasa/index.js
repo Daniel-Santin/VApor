@@ -9,18 +9,6 @@ const slides = [
         Component: Cuidado.page1,
         key: 0,
     },
-    {
-        Component: Cuidado.page2,
-        key: 1,
-    },
-    {
-        Component: Cuidado.page3,
-        key: 2,
-    },
-    {
-        Component: Cuidado.page4,
-        key: 3,
-    },
 ]
 
 export default function OQ(){

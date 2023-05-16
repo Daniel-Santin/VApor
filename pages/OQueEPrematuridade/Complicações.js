@@ -9,8 +9,8 @@ import { colors } from "../../themes/color"
 const FirstPage = () => {
     return (
         <ScrollView>
-            <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
-                <Image source={image1}/>
+            <View>
+                <Image style={{ marginRight: "auto", marginLeft: "auto" }} source={image1}/>
                 <Text>
                     <Text size="sm">
                     O risco de complicações neonatais é inversamente proporcional à idade gestacional (IG) ao nascimento, isso significa que quanto menor a idade gestacional, maior o risco de complicações. A cada semana que o feto permanece dentro do útero, ocorre um aprimoramento do seu desenvolvimento e redução da frequência e da gravidade de intercorrências e complicações neonatais.  

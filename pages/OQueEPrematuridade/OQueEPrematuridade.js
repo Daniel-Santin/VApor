@@ -1,12 +1,11 @@
 import { Pressable, ScrollView, View,StyleSheet } from "react-native"
 import { color } from "react-native-reanimated"
-import MomBaby from "../../components/Animations/MomBaby"
+import MomBaby from "../../assets/7-removebg-preview.png"
 import List from "../../components/List"
 import Text from "../../components/Text"
 import { colors } from "../../themes/color"
 import { useNavigation } from "@react-navigation/native";
 import { Image } from "react-native-animatable"
-import image1 from "../../assets/01-removebg-preview.png"
 
 const listItem = [
     'RN pós-termo: 42 semanas ou mais;',
@@ -21,9 +20,9 @@ const listItem2 = [
     'Pré-termo moderado a tardio (32 a <37 semanas)',
 ]
 const listItem3 = [
-    'Peso menor que 2500g (2,5kg): \n Baixo peso',
-    'Peso menor que 1500g (1,5kg): \n Muito baixo peso',
-    'Peso menor que 1000g (1kg): \n Extremo baixo peso',
+    'Peso menor que 2500g (2,5kg): Baixo peso',
+    'Peso menor que 1500g (1,5kg): Muito baixo peso',
+    'Peso menor que 1000g (1kg): Extremo baixo peso',
 
 ]
 
@@ -31,10 +30,16 @@ const page1 = () => {
     return (
         <ScrollView>
             <View style={{ marginTop: 20, flex: 1 }}>
-                <MomBaby></MomBaby>
+                <Image source={MomBaby} />
                 <View style={{ maxWidth: '100%'}}>
-                    <Text size="sm">
-                        Prematuro é todo recém-nascido com menos de 37 semanas completas de gestação. A OMS considera a prematuridade como um problema mundial, principalmente pela relação com a morbimortalidade neonatal. Além disso, o Brasil é colocado como o 10º país com maior taxa mundial de nascimentos prematuros, sendo responsável por 60% deles.
+                <Text style={{ textAlign: 'center' }} size="sm" >
+                        Prematuro é todo recém-nascido com menos de 37 semanas completas de gestação.
+                    </Text>
+                    <Text style={{ textAlign: 'center' }} size="sm" >
+                    A OMS considera a prematuridade como um problema mundial, principalmente pela relação com a morbimortalidade neonatal.
+                    </Text>
+                    <Text style={{ textAlign: 'center' }} size="sm" >
+                    Além disso, o Brasil é colocado como o 10º país com maior taxa mundial de nascimentos prematuros, sendo responsável por 60% deles.
                     </Text>
                 </View>
             </View>
@@ -131,7 +136,7 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: colors.darkPink,
         borderRadius: 100,
-        width: '50%',
+        width: '100%',
         fontSize: 5,
         display: 'flex',
         alignItems: 'center',

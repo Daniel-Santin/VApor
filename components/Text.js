@@ -1,7 +1,7 @@
 import { Text, StyleSheet, } from "react-native";
 import { colors } from "../themes/color";
 
-export default function ({ children, size = 'md', align, type, color = colors.black }) {
+export default function ({ children, size = 'md', align, type, color = colors.black, style: style2 }) {
     const style = {
         color,
         ...styles.text,
@@ -11,7 +11,7 @@ export default function ({ children, size = 'md', align, type, color = colors.bl
     }
 
     return (
-        <Text style={style}>
+        <Text style={{...style, ...style2}}>
             { children }
         </Text>
     )

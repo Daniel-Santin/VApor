@@ -31,13 +31,13 @@ import TwoYears from '../pages/Desenvolvimento/TwoYears';
 export default function Routes(){
   return (
     <Drawer.Navigator useLegacyImplementation={true} screenOptions={{
-      drawerActiveBackgroundColor: colors.darkPink,
+      drawerActiveBackgroundColor: colors.purple,
       drawerActiveTintColor: '#fff',
       headerStyle: { backgroundColor: '#7d46de', },
-      headerTitleStyle: { color: '#7d46de', }
+      headerTitleStyle: { color: '#7d46de', },
     }}
     >
-      <Drawer.Screen name="QuemSomos" component={QuemSomos} />
+      <Drawer.Screen name="Quem Somos" component={QuemSomos} />
       <Drawer.Screen name="O Que é Prematuridade?" component={OQ} />
       <Drawer.Screen name="Gráfico de crescimento" component={GraficodeCresc} />
       <Drawer.Screen name="Complicações Comuns" component={Complicações} />

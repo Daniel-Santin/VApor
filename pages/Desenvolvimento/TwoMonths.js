@@ -9,7 +9,7 @@ import List from "../../components/List";
 import babyImage from '../../assets/baby1.png'
 
 const Box = ({ children }) => (
-    <View style={{ backgroundColor: colors.purple, padding: 4, maxWidth: 125, borderRadius: 8, alignSelf: 'center' }}>
+    <View style={{ backgroundColor: colors.purple, padding: 4, maxWidth: "100%", borderRadius: 8, alignSelf: 'center' }}>
         { children }
     </View>
 )

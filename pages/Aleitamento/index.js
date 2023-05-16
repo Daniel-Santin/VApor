@@ -3,22 +3,24 @@ import List from "../../components/List"
 
 import Text from "../../components/Text"
 
-import image1 from "../../assets/02-removebg-preview.png"
+import image1 from "../../assets/aleitamento.jpg"
 import Slider from "../../components/Slider"
-import Pressable from "react-native/Libraries/Components/Pressable/Pressable"
 import { colors } from "../../themes/color"
 
 const page1 = () => {
     return (
         <ScrollView>
-            <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
-                <Image source={image1}/>
+            <View>
+                <Image style={{ marginLeft: "auto", marginRight: "auto"}} source={image1}/>
                 <Text>
-                    <Text size="sm">
-                    {'\n'}      O leite materno é a melhor fonte de nutrição para os recém nascidos.{'\n'}      A Academia Americana de Pediatria recomenda a amamentação como a única fonte de nutrição para o seu bebê por cerca de 6 meses e pode ser continuada pelo tempo que a mãe e o bebê desejarem.
+                    <Text style={{ marginTop: 10, textAlign: "center" }} size="sm">
+                    O leite materno é a melhor fonte de nutrição para os recém nascidos.{'\n'}
                     </Text>
-                    <Text size="sm">
-                    {'\n'}     Inicialmente, é melhor alimentar seu recém-nascido sempre que ele chorar porque está com fome. Com o passar do tempo. ele começará a desenvolver um cronograma bastante regular. À medida que você se familiarizar com os sinais e necessidades dele, poderá programar as mamadas de acordo com a rotina dele.
+                    <Text style={{ marginTop: 10, textAlign: "center" }} size="sm">
+                    A Academia Americana de Pediatria recomenda a amamentação como a única fonte de nutrição para o seu bebê por cerca de 6 meses e pode ser continuada pelo tempo que a mãe e o bebê desejarem.
+                    </Text>
+                    <Text style={{ marginTop: 10, textAlign: "center" }} size="sm">
+                    Inicialmente, é melhor alimentar seu recém-nascido sempre que ele chorar porque está com fome. Com o passar do tempo. ele começará a desenvolver um cronograma bastante regular. À medida que você se familiarizar com os sinais e necessidades dele, poderá programar as mamadas de acordo com a rotina dele.
                     </Text>
                 </Text>
              </View>
@@ -28,8 +30,7 @@ const page1 = () => {
 const page2 = () => {
     return (
         <ScrollView>
-            <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
-                <Image source={image1}/>
+            <View style={{ marginBottom: 20 }}>
                 <Text size="sm">
                         Devido ao período de hospitalização muitos bebês prematuros podem necessitar de complemento com fórmulas. O pediatra é o profissional mais indicado para direcionar qual fórmula usar.
                     </Text>

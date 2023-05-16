@@ -25,8 +25,7 @@ const FirstPage = () => {
 const SecondPage = () => {
     return (
         <ScrollView>
-            <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
-                <Image source={image1}/>
+            <View style={{marginTop: 20}}>
                 <Text  size="sm" >
                     <Text size="sm">   No Gráfico de crescimento, as curvas de acompanhamento de bebês prematuros baseiam-se no padrão de crescimento do bebê ainda no útero</Text>
                     {"\n"} {"\n"}
