@@ -14,8 +14,8 @@ const listItem = [
 
 const FirstPage = () => (
     <ScrollView>
-    <View style={{ paddingTop:20,display:'flex',flexDirection:'row',maxWidth:"55%"}}>
-        <Image source={image1}/>
+    <View>
+        <Image style={{ marginLeft: "auto", marginRight: "auto"}} source={image1}/>
         <Text>
             <Text size="sm">
             {'\n'}    Cada profissão tem seu papel para cumprir no follow-up, aqui iremos falar brevemente sobre cada um. 
